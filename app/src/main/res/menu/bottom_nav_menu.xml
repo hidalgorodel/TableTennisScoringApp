@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_leaderboard"
+        android:icon="@drawable/ic_baseline_leaderboard_24"
+        android:title="@string/title_leaderboard" />
+
+    <item
+        android:id="@+id/navigation_players"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/title_account" />
+
+    <item
+        android:id="@+id/navigation_scoring"
+        android:icon="@drawable/ic_round_score_24"
+        android:title="@string/title_scoring" />
+
+</menu>

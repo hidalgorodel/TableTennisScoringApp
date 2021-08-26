@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_leaderboard">
+
+    <fragment
+        android:id="@+id/navigation_leaderboard"
+        android:name="org.club.sports.android.tabletennisscoringapp.ui.leaderboard.LeaderboardFragment"
+        android:label="@string/title_leaderboard"
+        tools:layout="@layout/fragment_leaderboard" />
+
+    <fragment
+        android:id="@+id/navigation_players"
+        android:name="org.club.sports.android.tabletennisscoringapp.ui.dashboard.DashboardFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_scoring"
+        android:name="org.club.sports.android.tabletennisscoringapp.ui.notifications.NotificationsFragment"
+        android:label="@string/title_scoring"
+        tools:layout="@layout/fragment_notifications" />
+</navigation>
