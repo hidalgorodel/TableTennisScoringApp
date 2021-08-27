@@ -10,16 +10,14 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import org.club.sports.android.tabletennisscoringapp.R
+import androidx.fragment.app.viewModels
 import org.club.sports.android.tabletennisscoringapp.databinding.FragmentLeaderboardBinding
 
 class LeaderboardFragment : Fragment() {
 
-    private lateinit var leaderboardViewModel: LeaderboardViewModel
+    private val viewModel: LeaderboardViewModel by viewModels()
     private var _binding: FragmentLeaderboardBinding? = null
 
     // This property is only valid between onCreateView and
@@ -31,7 +29,6 @@ class LeaderboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        leaderboardViewModel = ViewModelProvider(this).get(LeaderboardViewModel::class.java)
 
         _binding = FragmentLeaderboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -39,7 +36,7 @@ class LeaderboardFragment : Fragment() {
         binding.leaderboardView.setContent {
             Column(modifier = Modifier.padding(16.dp)) {
                 Text(
-                    text = "Leaderboard Fragment via Compose",
+                    text = viewModel.text.toString(),
                     style = MaterialTheme.typography.body1,
                     color = Color.Green
                 )
